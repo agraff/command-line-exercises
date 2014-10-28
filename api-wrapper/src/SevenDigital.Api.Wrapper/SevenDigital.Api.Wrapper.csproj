@@ -1,0 +1,159 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{42B4EE01-CDC9-482D-BBB1-B6147A6EA00D}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SevenDigital.Api.Wrapper</RootNamespace>
+    <AssemblyName>SevenDigital.Api.Wrapper</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\..\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\packages\Newtonsoft.Json.6.0.5\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="OAuth">
+      <HintPath>..\..\packages\OAuth.1.0.3\lib\net40\OAuth.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Api.cs" />
+    <Compile Include="Environment\AttributeRequestDataBuilder.cs" />
+    <Compile Include="Environment\EssentialDependencyCheck.cs" />
+    <Compile Include="Extensions\ApiExtensions.cs" />
+    <Compile Include="Extensions\HasPlaylistIdParameterExtensions.cs" />
+    <Compile Include="Extensions\HasPlaylistItemIdParameterExtensions.cs" />
+    <Compile Include="Extensions\ParameterExtensions.cs" />
+    <Compile Include="Extensions\ShopExtensions.cs" />
+    <Compile Include="Requests\AcceptFormat.cs" />
+    <Compile Include="Requests\BaseUriFromApiUri.cs" />
+    <Compile Include="Requests\BaseUriFromString.cs" />
+    <Compile Include="Requests\IBaseUriProvider.cs" />
+    <Compile Include="Requests\IRequestBuilder.cs" />
+    <Compile Include="Requests\RequestBuilder.cs" />
+    <Compile Include="Requests\RequestPayload.cs" />
+    <Compile Include="Requests\RouteParamsSubstitutor.cs" />
+    <Compile Include="Http\HttpMethodHelpers.cs" />
+    <Compile Include="Requests\ApiRequest.cs" />
+    <Compile Include="Exceptions\ApiErrorException.cs" />
+    <Compile Include="Exceptions\ApiException.cs" />
+    <Compile Include="Exceptions\ApiResponseException.cs" />
+    <Compile Include="Exceptions\ApiWebException.cs" />
+    <Compile Include="Exceptions\InputParameterException.cs" />
+    <Compile Include="Exceptions\InvalidResourceException.cs" />
+    <Compile Include="Exceptions\OAuthException.cs" />
+    <Compile Include="Exceptions\RemoteApiException.cs" />
+    <Compile Include="Exceptions\UnexpectedXmlResponseException.cs" />
+    <Compile Include="Exceptions\UnrecognisedErrorException.cs" />
+    <Compile Include="Exceptions\UnrecognisedStatusException.cs" />
+    <Compile Include="Exceptions\MissingDependencyException.cs" />
+    <Compile Include="Exceptions\NonXmlResponseException.cs" />
+    <Compile Include="Exceptions\UserCardException.cs" />
+    <Compile Include="Extensions\AffiliatePartnerExtensions.cs" />
+    <Compile Include="Extensions\EnumExtensions.cs" />
+    <Compile Include="Extensions\HasAddCardParameterExtensions.cs" />
+    <Compile Include="Extensions\HasBasketItemParameterExtensions.cs" />
+    <Compile Include="Extensions\HasCardIdParameterExtensions.cs" />
+    <Compile Include="Extensions\HasIpAddressParameter.cs" />
+    <Compile Include="Extensions\HasLockerSortExtensions.cs" />
+    <Compile Include="Extensions\HasPurchaseIdParameterExtensions.cs" />
+    <Compile Include="Extensions\HasArtistIdParameterExtensions.cs" />
+    <Compile Include="Extensions\HasBasketParameterExtensions.cs" />
+    <Compile Include="Extensions\HasChartParameterExtensions.cs" />
+    <Compile Include="Extensions\HasKeyParameterExtensions.cs" />
+    <Compile Include="Extensions\HasLetterParameterExtensions.cs" />
+    <Compile Include="Extensions\HasPagingExtensions.cs" />
+    <Compile Include="Extensions\HasPriceParameterExtensions.cs" />
+    <Compile Include="Extensions\HasReleaseIdParameterExtensions.cs" />
+    <Compile Include="Extensions\HasReleaseTypeParameterExtensions.cs" />
+    <Compile Include="Extensions\HasSearchParameterExtensions.cs" />
+    <Compile Include="Extensions\HasTagsExtensions.cs" />
+    <Compile Include="Extensions\HasTrackIdParameterExtensions.cs" />
+    <Compile Include="Extensions\HasUserDeliverItemParameterExtensions.cs" />
+    <Compile Include="Extensions\LockerSortColumn.cs" />
+    <Compile Include="Extensions\SortOrder.cs" />
+    <Compile Include="Requests\Serializing\HalLinkCollectionConverter.cs" />
+    <Compile Include="Requests\Serializing\IPayloadSerializer.cs" />
+    <Compile Include="Requests\Serializing\JsonPayloadSerializer.cs" />
+    <Compile Include="Requests\Serializing\PayloadFormat.cs" />
+    <Compile Include="Requests\Serializing\Utf8StringWriter.cs" />
+    <Compile Include="Requests\Serializing\XmlPayloadSerializer.cs" />
+    <Compile Include="Requests\UriPath.cs" />
+    <Compile Include="Responses\IResponseCache.cs" />
+    <Compile Include="Responses\NullResponseCache.cs" />
+    <Compile Include="Requests\Request.cs" />
+    <Compile Include="IApiUri.cs" />
+    <Compile Include="IOAuthCredentials.cs" />
+    <Compile Include="Requests\RequestData.cs" />
+    <Compile Include="FluentApi.cs" />
+    <Compile Include="IFluentApi.cs" />
+    <Compile Include="Requests\DictionaryExtensions.cs" />
+    <Compile Include="Http\HttpClientMediator.cs" />
+    <Compile Include="Http\IHttpClient.cs" />
+    <Compile Include="Responses\Parsing\Exceptions\JsonParseFailedException.cs" />
+    <Compile Include="Responses\Response.cs" />
+    <Compile Include="Responses\Parsing\ApiResponseDetector.cs" />
+    <Compile Include="Responses\Parsing\ExceptionFactory.cs" />
+    <Compile Include="Responses\Parsing\Exceptions\NonXmlContentException.cs" />
+    <Compile Include="Responses\Parsing\Exceptions\UnexpectedXmlContentException.cs" />
+    <Compile Include="Responses\Parsing\IApiResponseDetector.cs" />
+    <Compile Include="Responses\Parsing\ResponseParser.cs" />
+    <Compile Include="Responses\Parsing\IResponseParser.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Responses\Parsing\ResponseDeserializer.cs" />
+    <Compile Include="StaticApi.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SevenDigital.Api.Schema\SevenDigital.Api.Schema.csproj">
+      <Project>{513C4B04-994E-4149-BFD6-A6910E0F95B8}</Project>
+      <Name>SevenDigital.Api.Schema</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
