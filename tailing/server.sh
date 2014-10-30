@@ -1,3 +1,6 @@
+echo "Messages are being logged to 'server.log'"
+echo "Press Control-C to stop logging."
+
 while :
 do
     sleep 0.$(( (( RANDOM % 10 ) + 1)))s
